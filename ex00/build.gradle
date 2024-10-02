@@ -11,7 +11,7 @@ repositories {
 }
 
 ext {
-    junitVersion = '5.10.2'
+    junitVersion = '5.9.2'
 }
 
 sourceCompatibility = '1.8'
@@ -28,8 +28,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
     // 금일 학습할 라이브러리 추가 예정
-
-    // https://mvnrepository.com/artifact/org.springframework/spring-core/5.3.27
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
     implementation 'org.springframework:spring-core:5.3.27'
 
     // https://mvnrepository.com/artifact/org.springframework/spring-context
@@ -38,15 +37,46 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
     implementation 'org.springframework:spring-webmvc:5.3.27'
 
-    // https://mvnrepository.com/artifact/org.springframework/spring-test/5.3.27
+    // https://mvnrepository.com/artifact/org.springframework/spring-test
     testImplementation 'org.springframework:spring-test:5.3.27'
+
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly 'org.projectlombok:lombok:1.18.30'
     testCompileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.4'
+
+    // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+    implementation 'com.zaxxer:HikariCP:5.0.0'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation 'org.apache.logging.log4j:log4j-core:2.22.1'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    implementation 'org.apache.logging.log4j:log4j-api:2.22.1'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
+    testImplementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.22.1'
+
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    implementation 'org.mybatis:mybatis:3.5.7'
+
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
+    implementation 'org.mybatis:mybatis-spring:2.0.6'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+    implementation 'org.springframework:spring-jdbc:5.3.27'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-tx
+    implementation 'org.springframework:spring-tx:5.3.27'
+
+
 }
 
 test {
-    useJUnitPlatform()}
+    useJUnitPlatform()
+}
