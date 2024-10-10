@@ -29,5 +29,5 @@
     </bean>
 
     <mybatis-spring:scan base-package="org.zerock.ex00.mappers" />
-
+    
 </beans>

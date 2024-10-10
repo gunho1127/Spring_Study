@@ -8,10 +8,9 @@ public interface BoardMapper {
 
     List<BoardVO> getList();
 
-    int insert(BoardVO vo);
+    int insert(BoardVO boardVO);
 
-    BoardVO select(long bno);
+    BoardVO select(Long bno);
 
     int update(BoardVO boardVO);
-
 }

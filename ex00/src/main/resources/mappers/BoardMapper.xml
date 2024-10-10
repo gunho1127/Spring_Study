@@ -17,7 +17,7 @@
         values (#{title}, #{content}, #{writer})
     </insert>
 
-    <select id="select" resultType="BoardVO" >
+    <select id="select" resultType="BoardVO">
         select * from tbl_board where bno = #{bno}
     </select>
 
@@ -28,5 +28,6 @@
         updateDate = now()
         where bno = #{bno}
     </update>
+
 
 </mapper>

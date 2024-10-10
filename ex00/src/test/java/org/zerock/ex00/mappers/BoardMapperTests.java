@@ -28,6 +28,7 @@ public class BoardMapperTests {
 
     @Test
     public void testInsert(){
+
         BoardVO boardVO = new BoardVO();
         boardVO.setTitle("NewTest");
         boardVO.setContent("New Test...");
@@ -51,13 +52,14 @@ public class BoardMapperTests {
     public void testUpdate(){
 
         BoardVO boardVO = new BoardVO();
-        boardVO.setTitle("Update Title");
-        boardVO.setContent("Update Content");
-        boardVO.setBno(6L);
+        boardVO.setTitle("Updated Title");
+        boardVO.setContent("Updated Content");
+        boardVO.setBno(5L);
 
         int updateCount = boardMapper.update(boardVO);
         log.info("update : " + updateCount);
 
     }
+
 
 }

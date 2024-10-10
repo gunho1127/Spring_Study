@@ -1,6 +1,5 @@
 package org.zerock.ex00.service;
 
-
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,7 +16,7 @@ public class BoardServiceTests {
     BoardService boardService;
 
     @Test
-    public void testList() {
+    public void testList(){
 
         log.info(boardService.list());
 
