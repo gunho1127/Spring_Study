@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.zerock.ex00.domain.BoardVO;
+import org.zerock.ex00.domain.Criteria;
+
+import java.util.List;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
@@ -24,6 +27,18 @@ public class BoardMapperTests {
     @Test
     public void testList(){
         boardMapper.getList().forEach(boardVO -> log.info(boardVO));
+    }
+
+    @Test
+    public void testPage(){
+
+        // 1,10
+        Criteria criteria = new Criteria();
+
+        List<BoardVO> list = boardMapper.getPage(criteria);
+
+        list.forEach(boardVO -> log.info(boardVO));
+
     }
 
     @Test
